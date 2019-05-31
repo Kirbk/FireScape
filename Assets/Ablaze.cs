@@ -26,22 +26,26 @@ public class Ablaze : MonoBehaviour
         Vector3 range = transform.localScale / 2.0f;
         List<Vector3> used = new List<Vector3>();
         int area = (int) (transform.localScale.x * transform.localScale.y) - 1;
+        Vector3 startPosition = transform.position;
+        startPosition.x -= (transform.localScale.x / 2.0f) - 0.5f;
+        startPosition.y -= (transform.localScale.y / 2.0f) - 0.5f;
 
         for (int i = 0; i < ((area < m_spawnAmount) ? (area) : (m_spawnAmount)); i++)
         {
             Vector3 position;
             while (true)
             {
-                position = new Vector3((float)((int)Random.Range(-range.x, range.x)) + 0.5f,
-                                       (float)((int)Random.Range(-range.y, range.y)) + 0.5f,
+                position = new Vector3(Mathf.Floor(Random.Range(0, transform.localScale.x)),
+                                       Mathf.Floor(Random.Range(0, transform.localScale.y)),
                                        0);
-                if (!used.Contains(position))
+
+                if (!used.Contains(position + startPosition))
                 {
-                    used.Add(position);
+                    used.Add(position + startPosition);
                     break;
                 }
             }
-            spawnFire(position);
+            spawnFire(position + startPosition);
         }
     }
 

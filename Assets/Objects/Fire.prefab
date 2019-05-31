@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4753565023333020413}
   - component: {fileID: 4753565023333020415}
   - component: {fileID: 4753565023333020414}
+  - component: {fileID: -4414610394697330265}
   m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
@@ -124,6 +125,21 @@ MonoBehaviour:
   m_RechargeDelay: 0.2
   m_RechargeRate: 0.01
   m_Light: {fileID: 4753565024169054979}
+--- !u!114 &-4414610394697330265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753565023333020410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93521d76e366c849b3d365b9ebb88ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_likelihoodToSpread: 0.5
+  m_spreadInterval: 2
+  m_randomize: 0
 --- !u!1 &4753565024169054977
 GameObject:
   m_ObjectHideFlags: 0

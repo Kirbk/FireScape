@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Ablaze.cs" />
     <Compile Include="Assets\Fizzle.cs" />
+    <Compile Include="Assets\Spread.cs" />
     <Compile Include="Assets\TemporaryLife.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/UnityProjects/Test2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
